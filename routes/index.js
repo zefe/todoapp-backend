@@ -6,12 +6,12 @@ const todosController = require('../controllers/todosController')
 
 
 module.exports = function() {
-    router.get('/', todosController.listTodos);
-    router.get('/:id', todosController.getTodo)
-    router.post('/', todosController.newTodo);
-    router.put('/:id', todosController.updateTodo);
-    router.patch('/:id', todosController.completedTodo);
-    router.delete('/:id', todosController.deleteTodo);
+    router.get('/todos', todosController.listTodos);
+    router.get('/todos/:id', todosController.getTodo)
+    router.post('/todos', todosController.newTodo);
+    router.put('/todos/:id', todosController.updateTodo);
+    router.patch('/todos/:id', todosController.completedTodo);
+    router.delete('/todos/:id', todosController.deleteTodo);
 
     router.get('/', (req, res) => {
         res.json({ appName: 'Todo API', version: 1 })

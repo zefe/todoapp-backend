@@ -25,7 +25,7 @@ app.use(express.urlencoded({ extended: true }))
 
 // Routing
 const router = require('./routes');
-app.use('/todos', router() );
+app.use('/', router() );
 
 //  Server
 app.listen(config.port, function(){
